@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import axios from 'axios';
 import Featured from '../components/Featured';
 import PizzaList from '../components/PizzaList';
 import styles from '../styles/Home.module.css';
 import Card from '../components/Card';
 import Category from '../components/Category';
+
 
 export default function Home({ pizzaList }) {
     return (
