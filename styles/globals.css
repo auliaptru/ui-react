@@ -1,26 +1,37 @@
+:root {
+    --orange: #ff5722;
+    --white: #eeeeee;
+    --blue: #00adb5;
+    --dark-gray: #303841;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+@font-face {
+    font-family: 'Abril Fatface';
+    src: url('/fonts/AbrilFatface-Regular.ttf');
+}
+
+@media (prefers-color-scheme: white) {
+    html {
+        color-scheme: white;
+    }
+    body {
+        color: black;
+        background: white;
+    }
 }

@@ -1,0 +1,219 @@
+.container {
+    height: calc(100vh - 80px);
+    display: flex;
+    background-color: var(--white);
+    color: var(--dark-gray);
+}
+
+.left {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgContainer {
+    width: 80%;
+    height: 80%;
+    position: relative;
+}
+
+.right {
+    flex: 1;
+    padding: 20px;
+}
+
+.title {
+    color: var(--blue);
+}
+
+.price {
+    color: var(--orange);
+    font-size: 24px;
+    font-weight: 400;
+    border-bottom: 1px solid var(--orange);
+}
+
+.desc {
+    font-size: 16px;
+    color: var(--dark-gray);
+}
+
+.choose {
+    font-size: 18px;
+}
+
+.sizes {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.size {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+}
+
+.size:nth-child(2) {
+    width: 60px;
+    height: 60px;
+}
+
+.size:last-child {
+    width: 70px;
+    height: 70px;
+}
+
+.number {
+    position: absolute;
+    top: -5px;
+    right: -20px;
+    background-color: var(--blue);
+    color: white;
+    font-size: 12px;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+
+.ingredients {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+.quantity {
+    width: 50px;
+    height: 30px;
+    background-color: #fff;
+    color: black;
+    border: 1px solid gray;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+
+.button {
+    height: 30px;
+    margin-left: 10px;
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        height: auto;
+    }
+    .imgContainer {
+        width: 40vw;
+        height: 40vw;
+        margin-top: 50px;
+    }
+    .title {
+        margin: 5px 0;
+    }
+    .sizes {
+        width: 90%;
+        padding: 0 20px;
+    }
+    .size {
+        width: 40px;
+        height: 40px;
+    }
+
+    .size:nth-child(2) {
+        width: 50px;
+        height: 50px;
+    }
+
+    .size:last-child {
+        width: 60px;
+        height: 60px;
+    }
+    .ingredients {
+        flex-direction: column;
+    }
+    .option {
+        margin: 5px 0;
+        font-size: 16px;
+    }
+    .checkbox {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+    .quantity,
+    .button {
+        height: 30px;
+        padding: 5px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        height: auto;
+        text-align: center;
+        flex-direction: column;
+    }
+    .imgContainer {
+        margin: 30px;
+        width: 70vw;
+        height: 70vw;
+    }
+    .title {
+        margin: 5px;
+    }
+    .sizes {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .size {
+        width: 40px;
+        height: 40px;
+    }
+
+    .size:nth-child(2) {
+        width: 50px;
+        height: 50px;
+    }
+
+    .size:last-child {
+        width: 60px;
+        height: 60px;
+    }
+    .ingredients {
+        flex-direction: column;
+    }
+    .option {
+        margin: 10px;
+        font-size: 16px;
+    }
+    .checkbox {
+        width: 23px;
+        height: 23px;
+    }
+    .quantity,
+    .button {
+        height: 30px;
+        padding: 5px 20px;
+    }
+}

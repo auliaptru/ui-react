@@ -1,0 +1,219 @@
+.order {
+    height: calc(100vh - 80px);
+    background-color: var(--white);
+    color: var(--dark-gray);
+    padding: 10px 30px;
+    padding-bottom: 30px;
+}
+
+.title {
+    font-size: 26px;
+    text-align: center;
+}
+
+.orderTitle {
+    text-align: center;
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+}
+
+.left {
+    flex: 2;
+}
+
+.table {
+    width: 100%;
+    border-spacing: 20px;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.statusTitle {
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.row:last-child {
+    padding-left: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.done {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inProgress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: inProgress 1.5s ease infinite alternate;
+}
+
+@keyframes inProgress {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.undone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.3;
+}
+
+.undone .checkedIcon,
+.inProgress .checkedIcon {
+    display: none;
+}
+
+.name {
+    font-weight: 500;
+    color: var(--blue);
+    font-size: 16px;
+}
+
+.total {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.right {
+    flex: 1;
+}
+
+.wrapper {
+    width: 90%;
+    max-height: 300px;
+    background-color: var(--dark-gray);
+    padding: 40px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--white);
+}
+
+.totalText {
+    margin-bottom: 10px;
+}
+
+.totalTextTitle {
+    margin-right: 10px;
+}
+
+.button {
+    color: var(--blue);
+    font-weight: bold;
+    background-color: var(--white);
+    cursor: not-allowed;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.completedStatus {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    color: var(--orange);
+    font-weight: 600;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+    .title {
+        font-size: 30px;
+        text-align: center;
+        margin-top: 0;
+    }
+    .status {
+        font-size: 24px;
+    }
+    .table {
+        margin-bottom: 10px;
+    }
+    .trTitle {
+        display: none;
+    }
+    .tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+    }
+    .name,
+    .total {
+        font-size: 18px;
+    }
+    .name {
+        color: #333;
+    }
+    .id::before {
+        content: 'Order ID: ';
+        font-weight: bold;
+    }
+    .name::before {
+        content: 'Customer: ';
+        font-weight: bold;
+    }
+    .address::before {
+        content: 'Address: ';
+        font-weight: bold;
+    }
+    .total::before {
+        content: 'Total: ';
+        font-weight: bold;
+    }
+    .row:last-child {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .done,
+    .undone,
+    .inProgress {
+        margin-bottom: 20px;
+    }
+    .wrapper {
+        width: 100%;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .order {
+        padding: 10px;
+        padding-bottom: 30px;
+    }
+    .orderTitle {
+        margin: 15px;
+    }
+    .statusTitle {
+        margin-bottom: 30px;
+    }
+    .row:last-child {
+        width: 90%;
+        justify-content: space-around;
+    }
+    .wrapper {
+        padding: 30px;
+        padding-top: 10px;
+    }
+}

@@ -1,0 +1,117 @@
+.container {
+    height: calc(100vh - 80px);
+    background-color: #222;
+    display: flex;
+}
+
+.item {
+    flex: 1;
+    position: relative;
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.item:last-child {
+    flex: 2;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.title {
+    font-size: 20px;
+    color: #b7903c;
+}
+
+.text {
+    color: lightgray;
+    font-size: 16px;
+    line-height: 1.7rem;
+}
+
+.motto {
+    padding: 0 20px;
+    color: rgb(221, 221, 221);
+    line-height: 2.6rem;
+}
+
+.phone {
+    font-size: 2rem;
+    color: lightgray;
+    margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        height: auto;
+        margin-bottom: 50px;
+    }
+    .item:first-child {
+        display: none;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+    .text {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        height: auto;
+        margin: 0;
+    }
+    .item:first-child {
+        display: none;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+    .text {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        text-align: center;
+        height: auto;
+        margin: 0;
+    }
+    .motto {
+        padding: 0 10px;
+    }
+    .item:first-child {
+        display: none;
+    }
+    .item {
+        flex-direction: column;
+    }
+    .title {
+        font-size: 22px;
+    }
+    .text {
+        font-size: 12px;
+    }
+    .imgContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .order {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .phone {
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,291 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--white);
+    padding: 50px 10px 30px 0;
+}
+
+.titleHeader {
+    /* color: #379683; */
+    font-size: 2.5rem;
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.desc {
+    font-size: 18px;
+    text-align: center;
+    color: var(--dark-gray);
+    width: 70%;
+}
+
+.cate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.imgContainer {
+    border-radius: 10px;
+    cursor: pointer;
+    height: 350px;
+    background-color: black;
+    transition: 0.5s;
+}
+
+.imgContainer:hover {
+    transition: all 0.5s ease;
+    box-shadow: 2px 2px 13px 13px rgba(207, 207, 207, 0.65);
+    -webkit-box-shadow: 2px 2px 13px 13px rgba(207, 207, 207, 0.65);
+    -moz-box-shadow: 2px 2px 13px 13px rgba(207, 207, 207, 0.65);
+}
+
+.card1,
+.card3 {
+    width: 350px;
+}
+
+.card2 {
+    width: 450px;
+    height: 385px;
+}
+
+.card1:hover,
+.card3:hover {
+    margin: 0 30px;
+    transform: scale(1.1);
+}
+
+.image {
+    opacity: 0.6;
+    border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.title {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 2.4rem;
+    color: var(--white);
+    line-height: 3rem;
+}
+
+.button {
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--blue);
+    transition: all 0.5s ease;
+}
+
+.button:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.wrapperDiscount {
+    position: absolute;
+    padding: 22px 20px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    top: -20px;
+    left: -20px;
+    box-shadow: 2px 2px 13px 5px rgba(31, 31, 31, 0.45);
+    -webkit-box-shadow: 2px 2px 13px 5px rgba(31, 31, 31, 0.45);
+    -moz-box-shadow: 2px 2px 13px 5px rgba(31, 31, 31, 0.45);
+}
+
+.discountText {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--white);
+    font-weight: 700;
+    line-height: 22px;
+    transform: rotate(-25deg);
+}
+
+.discountText:first-child {
+    font-size: 26px;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 40px;
+    }
+    .cate {
+        display: flex;
+        margin-top: 20px;
+    }
+    .wrapper {
+        margin-bottom: 20px;
+        margin: 2px 2px 20px 2px;
+    }
+    .imgContainer {
+        width: 240px;
+        height: 240px;
+    }
+    .card2 {
+        width: 250px;
+        height: 250px;
+    }
+    .imgContainer:hover {
+        margin: 0 15px;
+        transform: scale(1.1);
+    }
+    .title {
+        font-size: 1.4rem;
+        line-height: 25px;
+    }
+    .button {
+        bottom: 30%;
+        left: 10%;
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    .wrapperDiscount {
+        position: absolute;
+        padding: 10px;
+        width: 50px;
+        height: 50px;
+        top: -10px;
+        left: -10px;
+    }
+    .discountText {
+        width: 100%;
+        font-size: 14px;
+        line-height: 13px;
+        transform: rotate(-20deg);
+    }
+    .discountText:first-child {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .desc {
+        width: 100%;
+        font-size: 16px;
+    }
+    .cate {
+        display: flex;
+        margin-top: 20px;
+    }
+    .imgContainer {
+        width: 220px;
+        height: 220px;
+    }
+    .card2 {
+        width: 230px;
+        height: 230px;
+    }
+    .imgContainer:hover {
+        margin: 0 10px;
+    }
+    .title {
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        font-size: 1.4rem;
+    }
+    .button {
+        bottom: 30%;
+        left: 10%;
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+    .wrapperDiscount {
+        position: absolute;
+        padding: 10px;
+        width: 50px;
+        height: 50px;
+        top: -10px;
+        left: -10px;
+    }
+    .discountText {
+        width: 100%;
+        font-size: 14px;
+        line-height: 13px;
+    }
+    .discountText:first-child {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+    .titleHeader {
+        text-align: center;
+    }
+    .desc {
+        width: 100%;
+        font-size: 16px;
+    }
+    .cate {
+        display: flex;
+        margin-top: 20px;
+    }
+    .imgContainer {
+        width: 120px;
+        height: 120px;
+    }
+    .card2 {
+        width: 130px;
+        height: 130px;
+    }
+    .imgContainer:hover {
+        margin: 0 10px;
+        transform: scale(1.1);
+    }
+    .title {
+        top: 30%;
+        left: 40%;
+        font-size: 0.6rem;
+        line-height: 10px;
+    }
+    .button {
+        bottom: 30%;
+        left: 10%;
+        padding: 5px;
+        font-size: 7px;
+    }
+    .wrapperDiscount {
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        top: -10px;
+        left: -10px;
+    }
+    .discountText {
+        width: 100%;
+        font-size: 8px;
+        line-height: 10px;
+    }
+    .discountText:first-child {
+        font-size: 10px;
+    }
+}

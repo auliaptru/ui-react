@@ -1,0 +1,58 @@
+.container {
+    height: calc(120vh - 80px);
+    background-color: var(--white);
+    color: var(--dark-gray);
+    padding: 20px 30px;
+}
+
+.title {
+    text-align: center;
+    color: var(--blue);
+}
+
+.wrapperBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.addButton {
+    border: none;
+    padding: 10px;
+    width: 150px;
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--orange);
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.orderButton {
+    border: none;
+    padding: 10px;
+    width: 150px;
+    cursor: pointer;
+    background-color: var(--dark-gray);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.button {
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--white);
+}
+
+.button:first-child {
+    background-color: var(--blue);
+    margin-right: 10px;
+}
+
+.button:last-child {
+    background-color: crimson;
+}
